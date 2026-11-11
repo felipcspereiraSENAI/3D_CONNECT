@@ -40,6 +40,15 @@ public class MovimentoJogador : MonoBehaviour
     {
         inputMovimento = value.Get<Vector2>();
     }
+    public void OnAttack(InputValue value)
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Kick");
+        }
+    }
+
+
 
     private void Update()
     {
