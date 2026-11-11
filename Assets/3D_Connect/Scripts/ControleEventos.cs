@@ -21,23 +21,25 @@ public class ControleEventos : MonoBehaviour
 
     }
 
-    public void OnAttack(InputValue value)
+    public void OnLowKick(InputValue value)
     {
         if (value.isPressed && animator != null)
         {
-            animator.SetTrigger("Kick");
-            Debug.Log("Ataque com Mouse");
+            animator.SetTrigger("LowKick");
+            Debug.Log("Ataque Baixo");
         }
     }
 
-    // Callback da ação de correr
-    public void OnSprint(InputValue value)
+    public void OnFireBall(InputValue value)
     {
-        // value.isPressed é TRUE quando aperta, e FALSE quando solta
-        estaCorrendo = value.isPressed;
-        Debug.Log("Esta correndo: " + estaCorrendo);
+        if (value.isPressed && animator != null)
+        {
+            animator.SetTrigger("FireBall");
+            Debug.Log("Ataque de Fogo");
+        }
     }
 
+   
     private void Update()
     {
         if (animator == null) return;
@@ -48,21 +50,5 @@ public class ControleEventos : MonoBehaviour
         // Atualização dos parâmetros do Animator
         // Andando: Há movimento E NÃO está correndo
         animator.SetBool("isWalking", emMovimento && !estaCorrendo);
-
-        // Correndo: Há movimento E ESTÁ correndo
-        animator.SetBool("isRunning", emMovimento && estaCorrendo);
-
-
-
-        //Keyboard keyboard = Keyboard.current;
-        //if (keyboard.eKey.isPressed)
-        //{
-        //    animator.SetTrigger("Kick");
-        //    Debug.Log("Ataque Botão E");
-        //}
-
-
-
-
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fbd6eff669d23e647889a7df3f444e6b
+guid: a42acf6c8cba9d2428e9e3739a16b0bf
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -22,7 +22,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -31,11 +31,40 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Trunks|Anim_Idle
-      takeName: Trunks|Anim_Idle
-      internalID: 4247275747672889513
+      name: Armature_Principal|Anim_Idle
+      takeName: Armature_Principal|Anim_Idle
+      internalID: 1203030104561560289
       firstFrame: 0
       lastFrame: 340
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature_Principal|Anim_Kick
+      takeName: Armature_Principal|Anim_Kick
+      internalID: 7950266708859285183
+      firstFrame: 0
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -49,7 +78,7 @@ ModelImporter:
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -60,38 +89,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Trunks|Anim_Kick
-      takeName: Trunks|Anim_Kick
-      internalID: -7806754383576588263
-      firstFrame: 0
-      lastFrame: 38
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Trunks|Anim_Walking
-      takeName: Trunks|Anim_Walking
-      internalID: 1000487844374214946
+      name: Armature_Principal|Anim_Walking
+      takeName: Armature_Principal|Anim_Walking
+      internalID: 6644462261438469115
       firstFrame: 0
       lastFrame: 31
       wrapMode: 0
@@ -107,7 +107,7 @@ ModelImporter:
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -118,9 +118,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Trunks|Anima_Fireball
-      takeName: Trunks|Anima_Fireball
-      internalID: 8365337463341650338
+      name: Armature_Principal|Anima_Fireball
+      takeName: Armature_Principal|Anima_Fireball
+      internalID: 2866895493823167843
       firstFrame: 0
       lastFrame: 37
       wrapMode: 0
@@ -133,7 +133,7 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -424,33 +424,18 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Trunks(Clone)
+    - name: Player_Trunks(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: "Cal\xE7as"
-      parentName: Trunks(Clone)
-      position: {x: -0, y: 0.86154675, z: -0.00000006504498}
-      rotation: {x: -0.00000017881393, y: 0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Hair
-      parentName: Trunks(Clone)
-      position: {x: 0.068839826, y: 1.4569279, z: 0.18334477}
-      rotation: {x: -0.00000017881393, y: 0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: TroncoSuperior
-      parentName: Trunks(Clone)
-      position: {x: -0, y: 0.86154675, z: -0.00000006504498}
-      rotation: {x: -0.00000017881393, y: 0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Trunks
-      parentName: Trunks(Clone)
+    - name: Armature_Principal
+      parentName: Player_Trunks(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: Trunks
+      parentName: Armature_Principal
       position: {x: -0.0001160486, y: 0.72827494, z: 0.0023972683}
       rotation: {x: 0.000000001543782, y: 2.5799978e-17, z: 9.094947e-11, w: 1}
       scale: {x: 0.99999994, y: 1, z: 0.99999994}
@@ -614,6 +599,21 @@ ModelImporter:
       position: {x: -0.0000000123865895, y: 0.052153666, z: 4.4703483e-10}
       rotation: {x: 0.000000014901159, y: 0.0000008083879, z: -0.000000054016702, w: 1}
       scale: {x: 1.0000017, y: 1.000001, z: 1.000001}
+    - name: "Cal\xE7as"
+      parentName: Player_Trunks(Clone)
+      position: {x: -0, y: 0.86154675, z: -0.00000006504498}
+      rotation: {x: -0.00000017881393, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hair
+      parentName: Player_Trunks(Clone)
+      position: {x: 0.068839826, y: 1.4569279, z: 0.18334477}
+      rotation: {x: -0.00000017881393, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TroncoSuperior
+      parentName: Player_Trunks(Clone)
+      position: {x: -0, y: 0.86154675, z: -0.00000006504498}
+      rotation: {x: -0.00000017881393, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

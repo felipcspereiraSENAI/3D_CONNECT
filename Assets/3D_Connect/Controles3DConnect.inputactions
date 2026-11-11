@@ -3,7 +3,7 @@
     "name": "Controles3DConnect",
     "maps": [
         {
-            "name": "3DConnect",
+            "name": "GamePlay",
             "id": "adb14fb7-8d87-4bae-8de9-e1a889334ff8",
             "actions": [
                 {
@@ -16,13 +16,22 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Punch",
+                    "name": "FireBall",
                     "type": "Button",
                     "id": "455d6f66-5dd3-4a12-a891-f624768d33cd",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "LowKick",
+                    "type": "Button",
+                    "id": "9104de96-47b8-40f4-954e-02be242ffda4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -95,11 +104,44 @@
                 {
                     "name": "",
                     "id": "ddae3b73-a818-4c5f-ba76-b763c61e8ff3",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Punch",
+                    "action": "FireBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31beba7b-1f86-4783-881b-092d8581f76a",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2842445-c847-4237-9eed-69b2c6bc10c7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LowKick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c666071c-a095-4a7a-9c28-96ab383c3581",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LowKick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
