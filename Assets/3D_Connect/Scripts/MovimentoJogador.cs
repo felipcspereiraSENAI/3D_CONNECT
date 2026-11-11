@@ -40,11 +40,20 @@ public class MovimentoJogador : MonoBehaviour
     {
         inputMovimento = value.Get<Vector2>();
     }
-    public void OnAttack(InputValue value)
+    public void OnLowKick(InputValue value)
     {
         if (animator != null)
         {
-            animator.SetTrigger("Kick");
+            animator.SetTrigger("LowKick");
+            Debug.Log("Ataque Baixo");
+        }
+    }
+    public void OnFireBall(InputValue value)
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Fireball");
+            Debug.Log("Ataque de Fogo");
         }
     }
 
