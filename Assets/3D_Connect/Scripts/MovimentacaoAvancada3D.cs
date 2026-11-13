@@ -12,7 +12,7 @@ public class MovimentacaoAvancada3D : MonoBehaviour
     [SerializeField] private float suavizacaoRotacao = 12f;
 
     [Header("Pulo e Gravidade")]
-    [SerializeField] private float alturaPulo = 1.5f;
+    [SerializeField] private float alturaPulo = 5f;
     [SerializeField] private float gravidade = -20f;
 
     private CharacterController controller;

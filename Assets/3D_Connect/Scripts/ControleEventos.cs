@@ -39,7 +39,16 @@ public class ControleEventos : MonoBehaviour
         }
     }
 
-   
+    public void OnJump(InputValue value)
+    {
+        if (value.isPressed && animator != null)
+        {
+            animator.SetTrigger("Jump");
+            Debug.Log("Pulo");
+        }
+    }
+
+
     private void Update()
     {
         if (animator == null) return;
