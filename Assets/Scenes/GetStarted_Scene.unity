@@ -166,8 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4ceec2ae82f4242b15c2e9fd7fa424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControleEventos
-  controleLed: {fileID: 0}
-  duracaoPulsoLed: 0.5
 --- !u!114 &14857735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +178,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8eb93507684ae40be1b781fc22b81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControleDireto
+--- !u!114 &14857736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14857728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b374d9f7fe57340b77864730c87968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovimentacaoAvancada3D
+  velocidadeAndar: 4
+  velocidadeCorrer: 7.5
+  aceleracao: 10
+  suavizacaoRotacao: 12
+  alturaPulo: 1.5
+  gravidade: -20
+--- !u!143 &14857737
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14857728}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.08, z: 0}
 --- !u!1 &25911544
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1040,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 14857735}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 14857737}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 14857736}
   m_SourcePrefab: {fileID: 100100000, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
 --- !u!1 &1313971860
 GameObject:
@@ -1478,8 +1525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0f391cc1e622e4da7ea518a9f03a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MQTTManager
-  brokerAddress: 127.0.0.1
-  brokerPort: 1883
 --- !u!114 &1524120904
 MonoBehaviour:
   m_ObjectHideFlags: 0
