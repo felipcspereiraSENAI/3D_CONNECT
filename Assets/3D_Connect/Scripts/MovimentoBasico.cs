@@ -22,8 +22,15 @@ public class MovimentoBasico : MonoBehaviour
 
     void Update()
     {
+
         movimento.Set(inputMovimento.x, 0, inputMovimento.y);
+        if (movimento != Vector3.zero)
+        { 
+        
         character.Move(movimento * Time.deltaTime * velocidadeMovimento);
         transform.forward = Vector3.Slerp(transform.forward, movimento, Time.deltaTime * 10);
+        }
+           
+        
     }
 }
