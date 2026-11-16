@@ -2,7 +2,7 @@
 - Project name: 3D_CONNECT
 - Unity version: Unity 6000.3.17f1
 - Active game object:
-  - Name: Player_Trunks
+  - Name: CinemachineCamera
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
