@@ -7,7 +7,7 @@ public class MovimentoClick : MonoBehaviour
 {
     private CharacterController character;
     private Camera cameraPrincipal;
-
+    private Animator animator;
     private Vector3 destinoAlvo;
     private bool temDestino = false;
 
@@ -20,9 +20,11 @@ public class MovimentoClick : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         character = GetComponent<CharacterController>();
         cameraPrincipal = Camera.main;
         destinoAlvo = transform.position;
+        
     }
 
     // Crie uma Action "Click" (Button) vinculada ao Left Button [Mouse] no Input Actions
@@ -45,6 +47,8 @@ public class MovimentoClick : MonoBehaviour
 
     void Update()
     {
+       
+       
         if (character.isGrounded)
         {
             if (velocidadeVertical < 0f)
@@ -67,14 +71,19 @@ public class MovimentoClick : MonoBehaviour
                 Vector3 direcaoNormalizada = direcao.normalized;
                 movimentoHorizontal = direcaoNormalizada * velocidadeMovimento;
                 transform.forward = Vector3.Slerp(transform.forward, direcaoNormalizada, Time.deltaTime * 10f);
+                animator.SetBool("isWalking", true);
             }
             else
             {
                 temDestino = false;
+                animator.SetBool("isWalking", false);   
             }
         }
 
         Vector3 deslocamentoFinal = movimentoHorizontal + (Vector3.up * velocidadeVertical);
         character.Move(deslocamentoFinal * Time.deltaTime);
+        animator.SetBool("isWalking", temDestino); 
+
+        
     }
 }

@@ -154,48 +154,6 @@ MonoBehaviour:
   m_DefaultActionMap: GamePlay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &14857732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14857728}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b4ceec2ae82f4242b15c2e9fd7fa424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControleEventos
---- !u!114 &14857735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14857728}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8eb93507684ae40be1b781fc22b81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControleDireto
---- !u!114 &14857736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14857728}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b374d9f7fe57340b77864730c87968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovimentacaoAvancada3D
-  velocidadeAndar: 4
-  velocidadeCorrer: 7.5
-  aceleracao: 10
-  suavizacaoRotacao: 12
-  alturaPulo: 1.5
-  gravidade: -20
 --- !u!143 &14857737
 CharacterController:
   m_ObjectHideFlags: 0
@@ -221,20 +179,6 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.035, z: 0}
---- !u!114 &14857740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14857728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e31a2de938cefff43b4cfea79dabea89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControleAnimacaoBlendTree
-  velocidadeMaxima: 4
-  suavizacaoBlend: 0.1
 --- !u!114 &14857741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +186,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14857728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 038063f70b2a8f248a8c37db1b44be93, type: 3}
   m_Name: 
@@ -252,18 +196,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
   m_PrefabInstance: {fileID: 1205803841}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &14857744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14857728}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363e8c74446f28d44a675c2940bbea01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovimentoBasicoTank
 --- !u!114 &14857745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14857728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7a40484a9d3ba24b976ca1c119af167, type: 3}
   m_Name: 
@@ -1068,7 +1000,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 34a1b7a6f916b344ab88a30877f92746, type: 2}
+      objectReference: {fileID: 9100000, guid: 4a07b389c9c15bd4e972432d6a4e4af3, type: 2}
     - target: {fileID: 5866666021909216657, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -1082,25 +1014,10 @@ PrefabInstance:
       addedObject: {fileID: 14857731}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 14857732}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 14857735}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 14857736}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 14857740}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 14857737}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 14857741}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 14857744}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 14857745}
