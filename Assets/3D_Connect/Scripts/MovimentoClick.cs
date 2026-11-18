@@ -13,7 +13,6 @@ public class MovimentoClick : MonoBehaviour
 
     private float velocidadeVertical;
 
-
     [SerializeField] private float velocidadeMovimento = 4f;
     [SerializeField] private float distanciaParada = 0.15f;
     [SerializeField] private float gravidade = -20f;
@@ -24,7 +23,6 @@ public class MovimentoClick : MonoBehaviour
         character = GetComponent<CharacterController>();
         cameraPrincipal = Camera.main;
         destinoAlvo = transform.position;
-        
     }
 
     // Crie uma Action "Click" (Button) vinculada ao Left Button [Mouse] no Input Actions
@@ -41,14 +39,13 @@ public class MovimentoClick : MonoBehaviour
             {
                 destinoAlvo = hit.point;
                 temDestino = true;
+                Debug.DrawLine(raio.origin, hit.point, Color.cyan, 1f);
             }
         }
     }
 
     void Update()
     {
-       
-       
         if (character.isGrounded)
         {
             if (velocidadeVertical < 0f)
@@ -75,15 +72,32 @@ public class MovimentoClick : MonoBehaviour
             }
             else
             {
-                temDestino = false;
-                animator.SetBool("isWalking", false);   
+                PararMovimento();
             }
         }
 
         Vector3 deslocamentoFinal = movimentoHorizontal + (Vector3.up * velocidadeVertical);
         character.Move(deslocamentoFinal * Time.deltaTime);
-        animator.SetBool("isWalking", temDestino); 
+    }
 
-        
+    // Detecta colisões do CharacterController durante o movimento
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        // Verifica se está tentando andar e se a colisão foi lateral (ignora o chão)
+        if (temDestino && hit.normal.y < 0.5f)
+        {
+            PararMovimento();
+        }
+    }
+
+    // Método auxiliar para centralizar a parada do personagem e da animação
+    private void PararMovimento()
+    {
+        temDestino = false;
+        destinoAlvo = transform.position;
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 }

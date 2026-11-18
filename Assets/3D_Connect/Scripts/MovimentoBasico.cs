@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,19 +26,34 @@ private Animator animator;
     public void Update()
     {
         velocidadeVertical = -20f; 
-
+character.Move(Vector3.up *velocidadeVertical * Time.deltaTime);
 
         movimento.Set(inputMovimento.x, 0, inputMovimento.y);
         if (movimento != Vector3.zero)
         { 
         animator.SetBool("isWalking", true);
-        character.Move(movimento * Time.deltaTime * velocidadeMovimento);
+        
+        Vector3 deslocamentoFinal = movimento * velocidadeMovimento + (Vector3.up * velocidadeVertical);
+        character.Move(deslocamentoFinal * Time.deltaTime);
+               
+        
         transform.forward = Vector3.Slerp(transform.forward, movimento, Time.deltaTime * 10);
         }
         else
         {
             animator.SetBool("isWalking", false);
         }
-        
+        float estaMovimentando = Mathf.Abs(inputMovimento.x) + Mathf.Abs(inputMovimento.y);
+        if (estaMovimentando > 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+
+
     }
 }
