@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ArrastarLivre3D : MonoBehaviour
+public class RaycastDrag : MonoBehaviour
 {
     [Header("Configurações de Arrasto")]
     [SerializeField] private float distanciaMaxima = 100f;
@@ -25,6 +25,9 @@ public class ArrastarLivre3D : MonoBehaviour
 
     void Update()
     {
+       
+        
+        
         if (Mouse.current == null) return;
 
         // 1. PEGAR O OBJETO (Clique com botão direito)
@@ -49,6 +52,9 @@ public class ArrastarLivre3D : MonoBehaviour
                     offset = rbSelecionado.position - posMouseMundo;
                 }
             }
+
+ Debug.DrawRay(raio.origin, raio.direction * distanciaMaxima, Color.red, 1f);
+
         }
 
         // 2. AJUSTAR PROFUNDIDADE COM O SCROLL (Enquanto segura o objeto)

@@ -172,13 +172,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.2
-  m_SlopeLimit: 30
+  m_Height: 1.95
+  m_Radius: 0.27
+  m_SlopeLimit: 10
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.035, z: 0}
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!114 &14857741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 189826114}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15647037, y: 0, z: 0, w: 0.9876827}
-  m_LocalPosition: {x: -11.29315, y: 9.35, z: -15.48}
+  m_LocalPosition: {x: -10.02, y: 9.48, z: -15.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -786,7 +786,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &399999490
 GameObject:
@@ -1035,7 +1035,7 @@ Transform:
   m_GameObject: {fileID: 520502021}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15647037, y: 0, z: 0, w: 0.9876827}
-  m_LocalPosition: {x: -11.29315, y: 9.35, z: -15.48}
+  m_LocalPosition: {x: -10.02, y: 9.48, z: -15.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1724,15 +1724,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.29315
+      value: -10.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.98
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.48
+      value: -5.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a42acf6c8cba9d2428e9e3739a16b0bf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3846,7 +3846,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &8642888237890314047
 GameObject:

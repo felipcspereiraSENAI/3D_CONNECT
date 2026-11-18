@@ -1,21 +1,20 @@
-using System.IO;
-using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine; 
+using UnityEngine.InputSystem; 
 
 public class MovimentoBasico : MonoBehaviour
 {
-    private CharacterController character;
-private Animator animator;
+    private CharacterController player; // Referência ao componente CharacterController
+    private Animator animator; // Referência ao componente Animator
     private Vector2 inputMovimento;
     private Vector3 movimento;
 
-    private float velocidadeMovimento = 5;
+    private float velocidadeMovimento = 5f;
     private float velocidadeVertical;
     
     public void Start()
     {
-        character = GetComponent<CharacterController>(); 
-        animator = GetComponent<Animator>();
+        player = GetComponent<CharacterController>(); // Inicializa a referência ao CharacterController
+        animator = GetComponent<Animator>();// Inicializa a referência ao Animator
     }
 
     public void OnWalk(InputValue value)
@@ -25,35 +24,32 @@ private Animator animator;
 
     public void Update()
     {
+             
+       
         velocidadeVertical = -20f; 
-character.Move(Vector3.up *velocidadeVertical * Time.deltaTime);
+        
+        player.Move(Vector3.up * velocidadeVertical * Time.deltaTime);
 
         movimento.Set(inputMovimento.x, 0, inputMovimento.y);
+        
+        
+        
+        
         if (movimento != Vector3.zero)
         { 
         animator.SetBool("isWalking", true);
         
-        Vector3 deslocamentoFinal = movimento * velocidadeMovimento + (Vector3.up * velocidadeVertical);
-        character.Move(deslocamentoFinal * Time.deltaTime);
+        player.Move(movimento * Time.deltaTime * velocidadeMovimento);
                
         
-        transform.forward = Vector3.Slerp(transform.forward, movimento, Time.deltaTime * 10);
+        transform.forward = Vector3.Slerp(transform.forward, movimento, Time.deltaTime * 5f);
         }
         else
         {
             animator.SetBool("isWalking", false);
         }
-        float estaMovimentando = Mathf.Abs(inputMovimento.x) + Mathf.Abs(inputMovimento.y);
-        if (estaMovimentando > 0)
-        {
-            animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
-        }
-
-
+        
+        
 
     }
 }
