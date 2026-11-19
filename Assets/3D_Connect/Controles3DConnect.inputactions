@@ -32,6 +32,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "0d0d5a22-8a5f-41e7-af8f-b4ce2b18c332",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "d1a908a2-22d1-4f5a-a60e-fac5465f0c99",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "f13123d8-d8e7-4ffd-9d12-0eae001fd223",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -125,8 +152,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b2842445-c847-4237-9eed-69b2c6bc10c7",
-                    "path": "<Mouse>/leftButton",
+                    "id": "c666071c-a095-4a7a-9c28-96ab383c3581",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -136,12 +163,34 @@
                 },
                 {
                     "name": "",
-                    "id": "c666071c-a095-4a7a-9c28-96ab383c3581",
-                    "path": "<Keyboard>/j",
+                    "id": "c5b2cccd-dc22-4f07-885f-7cf3048fd14f",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LowKick",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9eb1cfde-462c-4a18-a902-3322e52502b0",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "039ce3f7-1cce-4e87-a0a6-e5b226e65968",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
