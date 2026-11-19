@@ -38,8 +38,11 @@ public class RaycastMouse : MonoBehaviour
                             Debug.Log("O item foi coletado!");
                             hit.collider.gameObject.transform.position = new Vector3(Random.Range(-10f, 10f),hit.collider.gameObject.transform.position.y,Random.Range(-10f, 10f));
                         }
+                    
                     }
+
                 }
+                
 
 
     }
