@@ -8,10 +8,13 @@ public class ControleEventos : MonoBehaviour
     private Vector2 inputMovimento; // Armazena o valor do input de movimento
     private Animator animator; // Referência ao componente Animator
     private bool estaCorrendo = false; // Variável para controlar o estado de corrida
+    
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        
     }
 
     public void OnWalk(InputValue value)
