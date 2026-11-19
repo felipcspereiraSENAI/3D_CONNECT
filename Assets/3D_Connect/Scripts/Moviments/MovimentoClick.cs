@@ -15,7 +15,7 @@ public class MovimentoClick : MonoBehaviour
 
     [SerializeField] private float velocidadeMovimento = 4f;
     [SerializeField] private float distanciaParada = 0.15f;
-    [SerializeField] private float gravidade = -20f;
+    
 
     void Start()
     {
